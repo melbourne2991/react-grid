@@ -8,7 +8,8 @@ export const Container: React.SFC<ContainerProps> = ({
   widths,
   gutters,
   units,
-  breakpoints
+  breakpoints,
+  ...props
 }) => {
   const styles: CSSObject = {
     display: "block",
@@ -51,5 +52,5 @@ export const Container: React.SFC<ContainerProps> = ({
     }
   );
 
-  return <div className={css(styles)} />;
+  return <div className={css(styles)} {...props} />;
 };
