@@ -1,5 +1,3 @@
-import { css } from "emotion";
-
 import {
   BreakpointMapWithDefault,
   BreakpointConfig,
