@@ -1,7 +1,7 @@
 import * as React from "react";
 import { GridProps } from "./types";
 import { GridContext } from "./Context";
-import { borderBox } from "./util";
+import { css } from "emotion";
 
 export const Grid: React.SFC<GridProps> = ({
   gutters,
@@ -19,7 +19,7 @@ export const Grid: React.SFC<GridProps> = ({
         units: units
       }}
     >
-      <div {...borderBox}>{children}</div>
+      <div className={css({ boxSizing: "border-box" })}>{children}</div>
     </GridContext.Provider>
   );
 };

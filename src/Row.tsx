@@ -1,6 +1,6 @@
 import * as React from "react";
 import { RowProps, GridContextProps } from "./types";
-import { applyBreakpointStyles, getBreakpointConfig, borderBox } from "./util";
+import { applyBreakpointStyles, getBreakpointConfig } from "./util";
 import { withGridContext } from "./Context";
 import { css } from "emotion";
 import { CSSObject } from "create-emotion";
@@ -36,13 +36,7 @@ const RowComponent: React.SFC<RowProps & GridContextProps> = ({
     }
   );
 
-  return (
-    <div
-      className={`${css(styles)} ${className}`}
-      {...borderBox}
-      children={children}
-    />
-  );
+  return <div className={`${css(styles)} ${className}`} children={children} />;
 };
 
 export const Row = withGridContext(RowComponent);

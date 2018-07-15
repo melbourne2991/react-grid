@@ -1,6 +1,6 @@
 import * as React from "react";
 import { GridContextProps, ApplyBreakpointStyleParam, ColProps } from "./types";
-import { applyBreakpointStyles, getBreakpointConfig, borderBox } from "./util";
+import { applyBreakpointStyles, getBreakpointConfig } from "./util";
 import { css } from "emotion";
 import { withGridContext } from "./Context";
 import { CSSObject } from "create-emotion";
@@ -65,11 +65,7 @@ const ColComponent: React.SFC<GridContextProps & ColProps> = ({
     ...breakpointStyles
   );
 
-  return (
-    <div className={`${css(styles)} ${className}`} {...borderBox}>
-      {children}
-    </div>
-  );
+  return <div className={`${css(styles)} ${className}`}>{children}</div>;
 };
 
 function getWidth(span: number, columns: number) {

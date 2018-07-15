@@ -53,7 +53,3 @@ export function applyBreakpointStyles<T>(
 
   return styles;
 }
-
-export const borderBox = css({
-  boxSizing: "border-box"
-});
