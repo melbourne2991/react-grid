@@ -4,6 +4,7 @@
   "description": "",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "repository": "https://github.com/melbourne2991/react-grid.git",
   "files": [
     "lib/**/*.d.ts",
     "lib/**/*.js"
