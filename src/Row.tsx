@@ -7,7 +7,8 @@ import { CSSObject } from "create-emotion";
 
 const RowComponent: React.SFC<RowProps & GridContextProps> = ({
   grid,
-  children
+  children,
+  className = ""
 }) => {
   const styles: CSSObject = {
     display: "flex",
@@ -35,7 +36,13 @@ const RowComponent: React.SFC<RowProps & GridContextProps> = ({
     }
   );
 
-  return <div className={css(styles)} {...borderBox} children={children} />;
+  return (
+    <div
+      className={`${css(styles)} ${className}`}
+      {...borderBox}
+      children={children}
+    />
+  );
 };
 
 export const Row = withGridContext(RowComponent);

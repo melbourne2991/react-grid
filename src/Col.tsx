@@ -9,7 +9,8 @@ const ColComponent: React.SFC<GridContextProps & ColProps> = ({
   span = "auto",
   grid,
   offset,
-  children
+  children,
+  className = ""
 }: ColProps & GridContextProps) => {
   const breakpointSpanSizes = getBreakpointConfig(span);
   const breakpointGutterSizes = getBreakpointConfig(grid.gutters);
@@ -65,7 +66,7 @@ const ColComponent: React.SFC<GridContextProps & ColProps> = ({
   );
 
   return (
-    <div className={css(styles)} {...borderBox}>
+    <div className={`${css(styles)} ${className}`} {...borderBox}>
       {children}
     </div>
   );

@@ -9,6 +9,7 @@ export const Container: React.SFC<ContainerProps> = ({
   gutters,
   units,
   breakpoints,
+  className = "",
   ...props
 }) => {
   const styles: CSSObject = {
@@ -52,5 +53,5 @@ export const Container: React.SFC<ContainerProps> = ({
     }
   );
 
-  return <div className={css(styles)} {...props} />;
+  return <div className={`${css(styles)} ${className}`} {...props} />;
 };

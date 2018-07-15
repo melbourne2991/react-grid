@@ -48,9 +48,11 @@ export interface ColProps<BPT = BreakpointThresholds> {
   span?: BreakpointConfig<number | "auto", BPT>;
   offset?: BreakpointConfig<number>;
   children: React.ReactNode;
+  className?: string;
 }
 
 export interface RowProps<BPT = BreakpointThresholds> {
+  className?: string;
   children:
     | React.ReactElement<ColProps<BPT>>
     | React.ReactElement<ColProps<BPT>>[];
@@ -66,6 +68,7 @@ export interface ContainerProps<BPT = BreakpointThresholds> {
   units: UnitConfig;
   gutters: BreakpointConfig<number, BPT>;
   breakpoints: Partial<BreakpointMap<number, BPT>>;
+  className?: string;
 }
 
 export interface ApplyBreakpointStyleParam<T = number> {
