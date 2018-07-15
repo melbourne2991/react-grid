@@ -1,0 +1,40 @@
+{
+  "name": "@melb2991/react-grid",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/**/*.d.ts",
+    "lib/**/*.js"
+  ],
+  "scripts": {
+    "start": "webpack-dev-server --historyApiFallback --mode=development",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf ./build/src && rm -rf ./lib",
+    "build": "npm run clean && tsc && cp -r ./build/src ./lib",
+    "deploy": "npm run build && npm publish --access public"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^16.4.6",
+    "@types/react-dom": "^16.0.6",
+    "@types/recompose": "^0.26.1",
+    "html-webpack-plugin": "^3.2.0",
+    "ts-loader": "^4.3.0",
+    "typescript": "^2.8.3",
+    "webpack": "^4.8.1",
+    "webpack-cli": "^3.0.2",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "peerDependencies": {},
+  "dependencies": {
+    "@types/lodash": "^4.14.112",
+    "emotion": "^9.2.5",
+    "lodash": "^4.17.10",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "recompose": "^0.27.1"
+  }
+}
